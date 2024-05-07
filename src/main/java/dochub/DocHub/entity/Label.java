@@ -1,13 +1,15 @@
 package dochub.DocHub.entity;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
 @Entity
-@Table(name = "labels")
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Table()
 public class Label {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

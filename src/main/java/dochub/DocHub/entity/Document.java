@@ -8,7 +8,7 @@ import java.util.Date;
 @Getter
 @Setter
 @Entity
-@Table(name = "documents")
+@Table()
 public class Document {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,11 +18,6 @@ public class Document {
     private String extension;
     private int fileSize;
     private Date uploadDate;
-
-    @ManyToOne
-    @JoinColumn(name = "catalog_id")
-    private Catalog catalog;
-
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
